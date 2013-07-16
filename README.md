@@ -36,9 +36,11 @@ end
 and use
 
 ```ruby
-string.diacritics_downcase
-string.diacritics_upcase
-string.permanent_link
+text = "Lorem ipsum"
+
+text.diacritics_downcase
+text.diacritics_upcase
+text.permanent_link
 ```
 
 ## Contributing
