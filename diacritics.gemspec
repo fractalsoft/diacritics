@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "diacritics"
   spec.version       = Diacritics::VERSION
   spec.authors       = ["Aleksander Malaszkiewicz"]
-  spec.email         = ["alek@fractalsoft.org"]
+  spec.email         = ["info@fractalsoft.org"]
   spec.summary       = %q{Support diacritics}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/fractalsoft/diacritics"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
