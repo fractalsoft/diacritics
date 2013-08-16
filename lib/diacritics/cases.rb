@@ -1,4 +1,12 @@
 # encoding: utf-8
+
+# String core class
+class String
+  alias_method :old_downcase, :downcase
+  alias_method :old_upcase, :upcase
+end
+
+# Diacritics classes
 module Diacritics
   # Downcase or upcase with diacritics support
   class Cases
@@ -12,15 +20,15 @@ module Diacritics
     end
 
     def downcase(text)
-      text.downcase.gsub @regexp[:downcase], @hash[:downcase]
+      text.old_downcase.gsub @regexp[:downcase], @hash[:downcase]
     end
 
     def upcase(text)
-      text.upcase.gsub @regexp[:upcase], @hash[:upcase]
+      text.old_upcase.gsub @regexp[:upcase], @hash[:upcase]
     end
 
     def permanent(text)
-      text.downcase.gsub @regexp[:permanent], @hash[:permanent]
+      text.old_downcase.gsub @regexp[:permanent], @hash[:permanent]
     end
   end
 end

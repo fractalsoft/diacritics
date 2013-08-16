@@ -10,4 +10,5 @@ group :development, :test do
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
+  gem 'simplecov', require: false
 end
