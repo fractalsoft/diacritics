@@ -34,11 +34,9 @@ String.send(:include, Diacritics::String)
 and use
 
 ```ruby
-text = "Lorem ipsum"
-
-text.diacritics
-text.diacritics
-text.permanent
+"ŁoreM Ìpsum Ðolór. Šit Ämet".downcase #=> "łorem ìpsum ðolór. šit ämet"
+"łorem ìpsum ðolÓr. šit ämet".upcase #=> "ŁOREM ÌPSUM ÐOLÓR. ŠIT ÄMET"
+"Łorem ìpsum ÐolÓr. Šit ämet".permanent #=> "lorem-ipsum-dolor-sit-aemet"
 ```
 
 ## Contributing
