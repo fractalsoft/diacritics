@@ -1,7 +1,4 @@
-require "diacritics/alphabet"
-require "diacritics/cases"
-require "diacritics/string"
-require "diacritics/version"
-
-module Diacritics
-end
+require 'diacritics/alphabet'
+require 'diacritics/cases'
+require 'diacritics/string'
+require 'diacritics/version'
