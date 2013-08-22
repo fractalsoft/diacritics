@@ -1,0 +1,20 @@
+#!/usr/bin/env ruby
+# encoding: utf-8
+
+require 'benchmark'
+require 'diacritics'
+
+String.send(:include, Diacritics::String)
+
+ARGV.each do |filename|
+  one = File.read(filename)
+  two = one.clone
+  Benchmark.bm do |benchmark|
+    benchmark.report('String:') do
+      one.old_upcase
+    end
+    benchmark.report('Diacritics:') do
+      two.upcase
+    end
+  end
+end

@@ -4,19 +4,25 @@ module Diacritics
   module String
     # @deprecated Please use {#downcase} instead.
     def diacritics_downcase
+      # rubocop:disable all
       warn '[DEPRECATION] `diacritics_downcase` is depraceted. Please use `downcase` instead.'
+      # rubocop:enable all
       send :downcase
     end
 
     # @deprecated Please use {#upcase} instead.
     def diacritics_upcase
+      # rubocop:disable all
       warn '[DEPRECATION] `diacritics_upcase` is depraceted. Please use `upcase` instead.'
+      # rubocop:enable all
       send :upcase
     end
 
     # @deprecated Please use {#permanent} instead.
     def permanent_link
+      # rubocop:disable all
       warn '[DEPRECATION] `permanent_link` is depraceted. Please use `permanent` instead.'
+      # rubocop:enable all
       send :permanent
     end
 
