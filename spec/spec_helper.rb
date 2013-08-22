@@ -1,6 +1,7 @@
+# encoding: utf-8
 require 'diacritics'
 require 'coveralls'
-# Coveralls.wear!
+Coveralls.wear!
 require 'simplecov'
 SimpleCov.start
 
