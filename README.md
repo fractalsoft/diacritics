@@ -1,4 +1,10 @@
-# Diacritics [![Gem Version](https://badge.fury.io/rb/diacritics.png)](http://badge.fury.io/rb/diacritics) [![Build Status](https://travis-ci.org/fractalsoft/diacritics.png)](https://travis-ci.org/fractalsoft/diacritics) [![Dependency Status](https://gemnasium.com/fractalsoft/diacritics.png)](https://gemnasium.com/fractalsoft/diacritics) [![Coverage Status](https://coveralls.io/repos/fractalsoft/diacritics/badge.png)](https://coveralls.io/r/fractalsoft/diacritics) [![Stories in Ready](https://badge.waffle.io/fractalsoft/diacritics.png)](http://waffle.io/fractalsoft/diacritics)  
+# Diacritics
+[![Gem Version](https://badge.fury.io/rb/diacritics.png)](http://badge.fury.io/rb/diacritics)
+[![Build Status](https://travis-ci.org/fractalsoft/diacritics.png)](https://travis-ci.org/fractalsoft/diacritics)
+[![Dependency Status](https://gemnasium.com/fractalsoft/diacritics.png)](https://gemnasium.com/fractalsoft/diacritics)
+[![Coverage Status](https://coveralls.io/repos/fractalsoft/diacritics/badge.png)](https://coveralls.io/r/fractalsoft/diacritics)
+[![Code Climate](https://codeclimate.com/repos/5284c9f156b1021a6e016740/badges/030f7f569aa0fa54ea66/gpa.png)](https://codeclimate.com/repos/5284c9f156b1021a6e016740/feed)
+[![Stories in Ready](https://badge.waffle.io/fractalsoft/diacritics.png)](http://waffle.io/fractalsoft/diacritics)  
 [![endorse](https://api.coderwall.com/torrocus/endorsecount.png)](https://coderwall.com/torrocus)
 
 Diacritics is a gem which support downcase, upcase and permanent link with diacritical characters.

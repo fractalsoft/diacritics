@@ -1,6 +1,6 @@
 AllCops:
   Excludes:
-    # - diacritics.gemspec
+    - diacritics.gemspec
 LineLength:
   Enabled: true
   Max: 79
