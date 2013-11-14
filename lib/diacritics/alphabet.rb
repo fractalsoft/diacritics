@@ -67,14 +67,14 @@ module Diacritics
           { # English
             downcase:  [' ', '?', '.', ','],
             upcase:    [' ', '?', '.', ','],
-            permanent: ['-', '',  '', ''],
+            permanent: ['-', '', '', ''],
           }
         end
 
         def de
           { # German
-            downcase:  %w[ä  ö  ü  ß],
-            upcase:    %w[Ä  Ö  Ü  ẞ],
+            downcase:  %w[ä ö ü ß],
+            upcase:    %w[Ä Ö Ü ẞ],
             permanent: %w[ae oe ue ss]
           }
         end
