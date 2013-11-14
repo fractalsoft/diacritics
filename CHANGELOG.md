@@ -9,3 +9,7 @@
 ## v0.0.3
 
 * benchmark
+
+## v0.0.4
+
+Nothing new. Updated rspec tests v3.0.
