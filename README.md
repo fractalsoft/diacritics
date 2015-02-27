@@ -25,12 +25,6 @@ Or install it yourself as:
 
 ## Usage
 
-```ruby
-Diacritics::downcase(text)
-Diacritics::upcase(text)
-Diacritics::permanent(text)
-```
-
 You can include methods into String class:
 
 ```ruby
