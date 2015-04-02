@@ -9,5 +9,5 @@ guard :rspec do
     name = array.last
     "spec/#{name}_spec.rb"
   end
-  watch('spec/spec_helper.rb')  { "spec" }
+  watch('spec/spec_helper.rb')  { 'spec' }
 end
