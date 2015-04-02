@@ -16,6 +16,12 @@ describe Diacritics::String do
     describe '#permanent' do
       it { expect(subject.permanent).to eq result[2] }
     end
+
+    describe '#pernament?' do
+      let(:permanent) { subject.permanent }
+      it { expect(subject).not_to be_permanent }
+      it { expect(permanent).to be_permanent }
+    end
   end
 
   context 'English' do
@@ -74,11 +80,11 @@ describe Diacritics::String do
     it_behaves_like 'word processing' do
       subject { 'Ödögidöggi' }
       let(:result) do
-        [
-          'ödögidöggi',
-          'ÖDÖGIDÖGGI',
-          'oedoegidoeggi'
-        ]
+        %w(
+          ödögidöggi
+          ÖDÖGIDÖGGI
+          oedoegidoeggi
+        )
       end
     end
   end
@@ -475,11 +481,11 @@ describe Diacritics::String do
     it_behaves_like 'word processing' do
       subject { 'Nyelvtörők' }
       let(:result) do
-        [
-          'nyelvtörők',
-          'NYELVTÖRŐK',
-          'nyelvtoeroek'
-        ]
+        %w(
+          nyelvtörők
+          NYELVTÖRŐK
+          nyelvtoeroek
+        )
       end
     end
   end
@@ -495,5 +501,28 @@ describe Diacritics::String do
         ]
       end
     end
+  end
+
+  context do
+    it { expect('lorem-ipsum').to be_slug }
+    it { expect('lorem_ipsum').to be_slug }
+    it { expect('lorem!ipsum').not_to be_slug }
+    it { expect('lorem#ipsum').not_to be_slug }
+    it { expect('lorem$ipsum').not_to be_slug }
+    it { expect('lorem&ipsum').not_to be_slug }
+    it { expect("lorem'ipsum").not_to be_slug }
+    it { expect('lorem(ipsum').not_to be_slug }
+    it { expect('lorem)ipsum').not_to be_slug }
+    it { expect('lorem+ipsum').not_to be_slug }
+    it { expect('lorem,ipsum').not_to be_slug }
+    it { expect('lorem/ipsum').not_to be_slug }
+    it { expect('lorem:ipsum').not_to be_slug }
+    it { expect('lorem;ipsum').not_to be_slug }
+    it { expect('lorem?ipsum').not_to be_slug }
+    it { expect('lorem@ipsum').not_to be_slug }
+    it { expect('lorem[ipsum').not_to be_slug }
+    it { expect('lorem]ipsum').not_to be_slug }
+    it { expect('lorem{ipsum').not_to be_slug }
+    it { expect('lorem}ipsum').not_to be_slug }
   end
 end
