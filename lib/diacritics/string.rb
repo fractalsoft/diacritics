@@ -23,7 +23,7 @@ module Diacritics
     end
 
     def slug?
-      return true if match(/^[[a-z_-]]+$/)
+      return true if match(/^[[a-z\d_-]]+$/)
     end
   end
 end
