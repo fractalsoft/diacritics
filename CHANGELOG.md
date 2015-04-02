@@ -1,7 +1,11 @@
+## v0.0.6
+
+* Fix `slug?` with diacritics characters
+
 ## v0.0.5
 
-* Check if the string is permanent?
-* Check if the string is slug? (only alphanumeric, - and _)
+* Check if the string is `permanent?`
+* Check if the string is `slug?` (only alphanumeric, - and _)
 
 ## v0.0.4
 

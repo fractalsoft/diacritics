@@ -23,7 +23,7 @@ module Diacritics
     end
 
     def slug?
-      !match(/^[[:alnum:][_-]]+$/).nil?
+      return true if match(/^[[a-z_-]]+$/)
     end
   end
 end
