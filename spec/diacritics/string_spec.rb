@@ -506,6 +506,7 @@ describe Diacritics::String do
   context do
     it { expect('lorem-ipsum').to be_slug }
     it { expect('lorem_ipsum').to be_slug }
+    it { expect('lorem0ipsum').to be_slug }
     it { expect('lorem!ipsum').not_to be_slug }
     it { expect('lorem#ipsum').not_to be_slug }
     it { expect('lorem$ipsum').not_to be_slug }
