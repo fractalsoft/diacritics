@@ -37,6 +37,10 @@ and use
 "ŁoreM Ìpsum Ðolór. Šit Ämet".downcase #=> "łorem ìpsum ðolór. šit ämet"
 "łorem ìpsum ðolÓr. šit ämet".upcase #=> "ŁOREM ÌPSUM ÐOLÓR. ŠIT ÄMET"
 "Łorem ìpsum ÐolÓr. Šit ämet".permanent #=> "lorem-ipsum-dolor-sit-aemet"
+'lorem-ipsum-dolor-sit-aemet'.permanent? #=> true
+'łorem ìpsum ðolór. šit ämet'.permanent? #=> false
+'lorem-ipsum-dolor-sit-aemet'.slug? #=> true
+'lorem@ipsum-dolor-sit-aemet'.slug? #=> false
 ```
 
 ## Contributing

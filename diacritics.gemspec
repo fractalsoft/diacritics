@@ -6,7 +6,7 @@ require 'diacritics/version'
 Gem::Specification.new do |spec|
   spec.name          = 'diacritics'
   spec.version       = Diacritics::VERSION
-  spec.authors       = ['Aleksander Malaszkiewicz']
+  spec.authors       = ['Aleksander Malaszkiewicz', 'Agnieszka Matysek']
   spec.email         = ['info@fractalsoft.org']
   spec.summary       = %q{Support diacritics}
   spec.homepage      = 'https://github.com/fractalsoft/diacritics'
@@ -17,6 +17,6 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_development_dependency 'bundler', '~> 1.3'
+  spec.add_development_dependency 'bundler', '~> 1.7'
   spec.add_development_dependency 'rake'
 end
