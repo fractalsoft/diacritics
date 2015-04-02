@@ -524,5 +524,7 @@ describe Diacritics::String do
     it { expect('lorem]ipsum').not_to be_slug }
     it { expect('lorem{ipsum').not_to be_slug }
     it { expect('lorem}ipsum').not_to be_slug }
+    it { expect('Lorem-ipsum').not_to be_slug }
+    it { expect('łorem-ipsum').not_to be_slug }
   end
 end
