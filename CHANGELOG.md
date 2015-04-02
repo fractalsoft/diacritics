@@ -1,3 +1,7 @@
+## v0.0.7
+
+* Fix `slug?` with digitals
+
 ## v0.0.6
 
 * Fix `slug?` with diacritics characters
