@@ -96,9 +96,9 @@ module Diacritics
 
     def fr
       { # French
-        downcase:  %w(à é è ê ô),
-        upcase:    %w(À É È Ê Ô),
-        permanent: %w(a e e e o)
+        downcase:  %w(à â é è ë ê ï î ô ù û ü ÿ ç œ æ),
+        upcase:    %w(À Â É È Ë Ê Ï Î Ô Ù Û Ü Ÿ Ç Œ Æ),
+        permanent: %w(a a e e e e i i o u u ue y c oe ae)
       }
     end
 
