@@ -504,6 +504,19 @@ describe Diacritics::String do
   end
 
   context do
+    it_behaves_like 'word processing' do
+      subject { 'Dès Noël où un zéphyr haï me vêt de glaçons würmiens je dîne d’exquis rôtis de bœuf au kir à l’aÿ d’âge mûr & cætera !' }
+      let(:result) do
+        [
+          'dès noël où un zéphyr haï me vêt de glaçons würmiens je dîne d’exquis rôtis de bœuf au kir à l’aÿ d’âge mûr & cætera !',
+          'DÈS NOËL OÙ UN ZÉPHYR HAÏ ME VÊT DE GLAÇONS WÜRMIENS JE DÎNE D’EXQUIS RÔTIS DE BŒUF AU KIR À L’AŸ D’ÂGE MÛR & CÆTERA !',
+          'des-noel-ou-un-zephyr-hai-me-vet-de-glacons-wuermiens-je-dine-d’exquis-rotis-de-boeuf-au-kir-a-l’ay-d’age-mur-&-caetera-!'
+        ]
+      end
+    end
+  end
+
+  context do
     it { expect('lorem-ipsum').to be_slug }
     it { expect('lorem_ipsum').to be_slug }
     it { expect('lorem0ipsum').to be_slug }
