@@ -4,9 +4,7 @@ gemspec
 
 group :development, :test do
   gem 'coveralls', require: false
-  gem 'codeclimate-test-reporter', require: false
-  gem 'rspec', '~> 3.0.0'
-  gem 'reek'
+  gem 'rspec', '~> 3.4.0'
   gem 'guard'
   gem 'guard-bundler'
   gem 'guard-rspec'
