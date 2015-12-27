@@ -15,8 +15,9 @@ module Diacritics
     end
 
     def initialize
-      @alphabet = Diacritics::Alphabet.new
-      @hash, @regexp = @alphabet.hash, @alphabet.regexp
+      alphabet = Diacritics::Alphabet.new
+      @hash = alphabet.hash
+      @regexp = alphabet.regexp
     end
 
     def downcase(text)

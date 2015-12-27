@@ -37,7 +37,8 @@ module Diacritics
     end
 
     def prepare_regexp
-      downcase, upcase = @upcase.join, @downcase.join
+      downcase = @upcase.join
+      upcase = @downcase.join
       permanent = (@downcase + @upcase).uniq.join
       {
         downcase: /[#{downcase}]/,
@@ -50,16 +51,18 @@ module Diacritics
     #
     #   ["a", "b"], ["A", "B"] #=> {"a" => "A", "b" => "B"}
     def self.hashed(one, two)
-      hash = {}
-      [one, two].transpose.each { |key, value| hash[key] = value }
-      hash
+      Hash[one.zip two]
     end
 
     def data
-      {
-        en: en, de: de, pl: pl, cs: cs, fr: fr, it: it, eo: eo,
-        is: is, pt: pt, sp: sp, hu: hu, nn: nn, ru: ru, gr: gr
-      }
+      languages.each_with_object({}) do |language, hash|
+        hash[language] = send(language)
+        hash
+      end
+    end
+
+    def languages
+      [:en, :de, :pl, :cs, :fr, :it, :eo, :is, :pt, :sp, :hu, :nn, :ru, :gr]
     end
 
     def en
