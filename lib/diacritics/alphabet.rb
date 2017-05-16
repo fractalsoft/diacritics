@@ -91,6 +91,8 @@ module Diacritics
 
     def cs
       { # Czech uses acute (á é í ó ú ý), caron (č ď ě ň ř š ť ž), ring (ů)
+        # aábcčdďeéěfghiíjklmnňoópqrřsštťuúůvwxyýzž
+        # AÁBCČDĎEÉĚFGHIÍJKLMNŇOÓPQRŘSŠTŤUÚŮVWXYÝZŽ
         downcase:  %w(á é í ó ú ý č ď ě ň ř š ť ů ž),
         upcase:    %w(Á É Í Ó Ú Ý Č Ď Ě Ň Ř Š Ť Ů Ž),
         permanent: %w(a e i o u y c d e n r s t u z)
@@ -99,6 +101,8 @@ module Diacritics
 
     def fr
       { # French
+        # abcdefghijklmnopqrstuvwxyzàâæçéèêëîïôœùûüÿ
+        # ABCDEFGHIJKLMNOPQRSTUVWXYZÀÂÆÇÉÈÊËÎÏÔŒÙÛÜŸ
         downcase:  %w(à â é è ë ê ï î ô ù û ü ÿ ç œ æ),
         upcase:    %w(À Â É È Ë Ê Ï Î Ô Ù Û Ü Ÿ Ç Œ Æ),
         permanent: %w(a a e e e e i i o u u ue y c oe ae)

@@ -48,3 +48,6 @@ and use
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
+
+Please remember about tests. Before you add new characters add test first and check that this test doesn't pass.
+Many of characters are the same in different languages.
