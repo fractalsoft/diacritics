@@ -6,3 +6,6 @@ rvm:
   - 2.2.0
   - 2.3.0
   - jruby-head
+before_install:
+  - gem install bundler
+  - gem update bundler
