@@ -5,6 +5,7 @@ module Diacritics
   private
 
   # Characters from many alphabets
+  # Get from https://en.wikipedia.org/wiki/Diacritic
   class Alphabet
     attr_reader :regexp, :hash
 
@@ -25,10 +26,10 @@ module Diacritics
     end
 
     def prepare_hash
-      klass = Diacritics::Alphabet
-      hash = klass.hashed(@downcase, @upcase)
-      one = klass.hashed(@downcase, @permanent)
-      two = klass.hashed(@upcase, @permanent)
+      class_name = Diacritics::Alphabet
+      hash = class_name.hashed(@downcase, @upcase)
+      one = class_name.hashed(@downcase, @permanent)
+      two = class_name.hashed(@upcase, @permanent)
       {
         downcase: hash.invert,
         upcase: hash,
@@ -57,7 +58,6 @@ module Diacritics
     def data
       languages.each_with_object({}) do |language, hash|
         hash[language] = send(language)
-        hash
       end
     end
 
@@ -67,9 +67,9 @@ module Diacritics
 
     def en
       { # English
-        downcase:  [' ', '?', '.', ','],
-        upcase:    [' ', '?', '.', ','],
-        permanent: ['-', '', '', '']
+        downcase:  [' ', '!', ',', '.', ':', '?'],
+        upcase:    [' ', '!', ',', '.', ':', '?'],
+        permanent: ['-', '', '', '', '', '']
       }
     end
 
@@ -90,10 +90,10 @@ module Diacritics
     end
 
     def cs
-      { # Czech
-        downcase:  %w(á č í ř š ý ž),
-        upcase:    %w(Á Č Í Ř Š Ý Ž),
-        permanent: %w(a c i r s y z)
+      { # Czech uses acute (á é í ó ú ý), caron (č ď ě ň ř š ť ž), ring (ů)
+        downcase:  %w(á é í ó ú ý č ď ě ň ř š ť ů ž),
+        upcase:    %w(Á É Í Ó Ú Ý Č Ď Ě Ň Ř Š Ť Ů Ž),
+        permanent: %w(a e i o u y c d e n r s t u z)
       }
     end
 
@@ -107,14 +107,14 @@ module Diacritics
 
     def it
       { # Italian
-        downcase:  %w(ì ù ò),
-        upcase:    %w(Ì Ù Ò),
-        permanent: %w(i u o)
+        downcase:  %w(à è é ì î ò ó ù),
+        upcase:    %w(À È É Ì Î Ò Ó Ù),
+        permanent: %w(a e e i i o o u)
       }
     end
 
     def eo
-      { # Esperanto
+      { # Esperantohas the symbols ŭ, ĉ, ĝ, ĥ, ĵ and ŝ
         downcase:  %w(ĉ ĝ ĥ ĵ ŝ ŭ),
         upcase:    %w(Ĉ Ĝ Ĥ Ĵ Ŝ Ŭ),
         permanent: %w(c g h j s u)
@@ -130,7 +130,7 @@ module Diacritics
     end
 
     def pt
-      { # Portugal
+      { # Portugal uses á, â, ã, à, ç, é, ê, í, ó, ô, õ and ú
         downcase:  %w(ã ç),
         upcase:    %w(Ã Ç),
         permanent: %w(a c)
@@ -139,9 +139,9 @@ module Diacritics
 
     def sp
       { # Spanish
-        downcase:  ['¿'],
-        upcase:    ['¿'],
-        permanent: ['']
+        downcase:  ['ñ', '¿', '¡'],
+        upcase:    ['Ñ', '¿', '¡'],
+        permanent: ['n', '', '']
       }
     end
 
