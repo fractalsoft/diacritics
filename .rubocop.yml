@@ -1,6 +1,11 @@
 AllCops:
   Excludes:
     - diacritics.gemspec
+    - Guardfile
 LineLength:
   Enabled: true
   Max: 79
+Style/AsciiComments:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+    Enabled: false
