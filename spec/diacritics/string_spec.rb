@@ -180,6 +180,19 @@ describe Diacritics::String do
     end
   end
 
+  context 'Portugués' do
+    it_behaves_like 'word processing' do
+      subject { 'Luís argüia à Júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.' }
+      let(:result) do
+        [
+          'luís argüia à júlia que «brações, fé, chá, óxido, pôr, zângão» eram palavras do português.',
+          'LUÍS ARGÜIA À JÚLIA QUE «BRAÇÕES, FÉ, CHÁ, ÓXIDO, PÔR, ZÂNGÃO» ERAM PALAVRAS DO PORTUGUÊS.',
+          'luis-argueia-a-julia-que-bracoes-fe-cha-oxido-por-zangao-eram-palavras-do-portugues'
+        ]
+      end
+    end
+  end
+
   context do
     it_behaves_like 'word processing' do
       subject { 'À l’époque de la conquête de la Gaule par les armées' }
