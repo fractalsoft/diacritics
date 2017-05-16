@@ -167,6 +167,19 @@ describe Diacritics::String do
     end
   end
 
+  context 'Spanish' do
+    it_behaves_like 'word processing' do
+      subject { 'Whisky bueno: ¡excitad mi frágil pequeña vejez!' }
+      let(:result) do
+        [
+          'whisky bueno: ¡excitad mi frágil pequeña vejez!',
+          'WHISKY BUENO: ¡EXCITAD MI FRÁGIL PEQUEÑA VEJEZ!',
+          'whisky-bueno-excitad-mi-fragil-pequena-vejez'
+        ]
+      end
+    end
+  end
+
   context do
     it_behaves_like 'word processing' do
       subject { 'À l’époque de la conquête de la Gaule par les armées' }
@@ -510,7 +523,7 @@ describe Diacritics::String do
         [
           'dès noël où un zéphyr haï me vêt de glaçons würmiens je dîne d’exquis rôtis de bœuf au kir à l’aÿ d’âge mûr & cætera !',
           'DÈS NOËL OÙ UN ZÉPHYR HAÏ ME VÊT DE GLAÇONS WÜRMIENS JE DÎNE D’EXQUIS RÔTIS DE BŒUF AU KIR À L’AŸ D’ÂGE MÛR & CÆTERA !',
-          'des-noel-ou-un-zephyr-hai-me-vet-de-glacons-wuermiens-je-dine-d’exquis-rotis-de-boeuf-au-kir-a-l’ay-d’age-mur-&-caetera-!'
+          'des-noel-ou-un-zephyr-hai-me-vet-de-glacons-wuermiens-je-dine-d’exquis-rotis-de-boeuf-au-kir-a-l’ay-d’age-mur-&-caetera-'
         ]
       end
     end
