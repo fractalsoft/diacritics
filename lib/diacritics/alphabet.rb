@@ -67,9 +67,9 @@ module Diacritics
 
     def en
       { # English
-        downcase:  [' ', '!', ',', '.', ':', '?'],
-        upcase:    [' ', '!', ',', '.', ':', '?'],
-        permanent: ['-', '', '', '', '', '']
+        downcase:  [' ', '!', ',', '.', ':', '?', '«', '»'],
+        upcase:    [' ', '!', ',', '.', ':', '?', '«', '»'],
+        permanent: ['-', '', '', '', '', '', '', '']
       }
     end
 
@@ -139,9 +139,9 @@ module Diacritics
 
     def sp
       { # Spanish
-        downcase:  ['ñ', '¿', '¡'],
-        upcase:    ['Ñ', '¿', '¡'],
-        permanent: ['n', '', '']
+        downcase:  ['ñ', 'õ', '¿', '¡'],
+        upcase:    ['Ñ', 'Õ', '¿', '¡'],
+        permanent: ['n', 'o', '', '']
       }
     end
 
