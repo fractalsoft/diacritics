@@ -17,6 +17,8 @@ module Diacritics
 
     private
 
+    attr_reader :downcase, :permanent, :upcase
+
     def prepare_alphabet
       data.each_pair do |_language, hash|
         @downcase += hash[:downcase]
@@ -27,9 +29,9 @@ module Diacritics
 
     def prepare_hash
       {
-        downcase: Hash[@upcase.zip @downcase],
-        upcase: Hash[@downcase.zip @upcase],
-        permanent: Hash[(@downcase + @upcase).zip @permanent * 2]
+        downcase: Hash[upcase.zip downcase],
+        upcase: Hash[downcase.zip upcase],
+        permanent: Hash[(downcase + upcase).zip permanent * 2]
       }
     end
 
