@@ -26,14 +26,10 @@ module Diacritics
     end
 
     def prepare_hash
-      class_name = Diacritics::Alphabet
-      hash = class_name.hashed(@downcase, @upcase)
-      one = class_name.hashed(@downcase, @permanent)
-      two = class_name.hashed(@upcase, @permanent)
       {
-        downcase: hash.invert,
-        upcase: hash,
-        permanent: one.merge(two)
+        downcase: Hash[@upcase.zip @downcase],
+        upcase: Hash[@downcase.zip @upcase],
+        permanent: Hash[(@downcase + @upcase).zip @permanent * 2]
       }
     end
 
@@ -46,13 +42,6 @@ module Diacritics
         upcase: /[#{upcase}]/,
         permanent: /[#{permanent}]/
       }
-    end
-
-    # Creates a hash from two arrays
-    #
-    #   ["a", "b"], ["A", "B"] #=> {"a" => "A", "b" => "B"}
-    def self.hashed(one, two)
-      Hash[one.zip two]
     end
 
     def data
