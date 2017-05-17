@@ -6,10 +6,14 @@ require 'diacritics/version'
 Gem::Specification.new do |spec|
   spec.name          = 'diacritics'
   spec.version       = Diacritics::VERSION
-  spec.authors       = ['Aleksander Malaszkiewicz', 'Agnieszka Matysek']
-  spec.email         = ['info@fractalsoft.org']
-  spec.summary       = %q{Support diacritics}
-  spec.description   = %q{Support diacritics in String}
+  spec.authors       = [
+    'Alex Malaszkiewicz',
+    'Agnieszka Matysek',
+    'François Vantomme',
+  ]
+  spec.email         = ['info[at]fractalsoft[dot]org']
+  spec.summary       = 'Support diacritics'
+  spec.description   = 'Support diacritics in String'
   spec.homepage      = 'https://github.com/fractalsoft/diacritics'
   spec.license       = 'MIT'
 
